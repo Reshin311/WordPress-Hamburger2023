@@ -1,0 +1,61 @@
+
+@use "../../foundation/mixin" as *;
+
+
+.l-footer {
+    height: 150px;
+    background-image: url(img/footer.jpg);
+    background-repeat: repeat;
+    text-align: center;
+    overflow: hidden;
+    width: calc(100vw - calc(100vw - 100%));
+
+
+}
+
+.p-link-footer {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 16px;
+    z-index: 1;
+    @include tablet {
+        margin-top: 40px;
+    }
+
+}
+
+.p-link-footer__shopinfo {
+    display: inline-block;
+    position: relative;
+    }
+    
+
+    .p-link-footer__history {
+        display: inline-block;
+        margin-left: 2rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 98px;
+            width: 2px;
+            height: 30px;
+            background: #fff;
+            transform: translate(-50%,-50%)rotate(0deg);
+        }
+    }
+
+    .co {
+        display: inline-block;
+        color: #fff;
+        margin-top: 70px;
+        margin-bottom: 16px;
+        font-size: 1.4rem;
+        @include tablet {
+            margin-top: 44px;
+            margin-bottom: 24px;
+        }
+
+    }

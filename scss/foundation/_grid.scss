@@ -1,0 +1,27 @@
+@use "../foundation/mixin" as *;
+
+
+
+body {
+    @include pc{
+    display: grid;
+    grid-template:
+        "header aside" 
+        "main   aside"
+        "footer footer";
+    }
+}
+
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+nav {
+    grid-area: aside;
+    
+}
+footer {
+    grid-area: footer;
+}

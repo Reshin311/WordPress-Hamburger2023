@@ -1,0 +1,1325 @@
+
+//main
+@use "../../foundation/mixin" as *;
+
+
+
+body.open-menu {
+    overflow: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+.p-title__main {
+    color: #fff;
+    font-weight: bold;
+}
+
+.p-img-top {
+    background-image: url(img/mainvisual-pc@2x.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    height: 285px;
+    overflow: hidden;
+    @include pc {
+        width: 100%;
+        height: 530px;
+    }
+}
+
+
+.p-title__top {
+    color: #ffff;
+    font-size: 3.6rem;
+    margin: 122px 0 110px 25px;
+    position: absolute;
+    font-weight: 700;
+    @include tablet {
+        margin-left: 86px;
+
+    }
+    @include pc {
+        margin: 234px 0 237px 86px;
+        font-size: 4rem;
+    }
+}
+
+.p-title__main {
+    color: #fff;
+    font-size: 4.1rem;
+    margin-top: 13px;
+    margin-left: 15px;
+    
+    font-family: Roboto;
+    margin-bottom: 210px;
+    @include tablet {
+        margin-bottom: min(275px);
+    }
+    @include pc {
+        font-size: 7rem;
+        margin-bottom: min(700px);
+    }
+}
+
+.p-heading__main {
+color: #3C2A10;
+    font-size: 2.2rem;
+    margin: 0 0 0;
+    }
+
+.p-text {
+    font-size: 1.6rem;
+    margin-top: 8px;
+    color: #3C2A10;
+    }
+    
+
+
+.p-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include tablet {
+        width: 50vw;
+    }
+    @include pc {
+    width: 40vw;
+    }
+}
+
+
+.p-card__takeout {
+    background-image:url(img/takeout3@2x.jpg);
+    
+}
+
+.p-card__eatin {
+    background-image:url(img/eatin-phone22@2x.jpg);
+}
+
+
+
+
+
+.p-container-main-description {
+    background: rgba(255,255,255,0.8);
+    margin: 0 15px 16px;
+    padding: 16px;
+}
+
+.p-heading__main {
+    font-weight: bold;
+}
+.p-line__under-title {
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 22px;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        transform: translateX(-50%);
+    }
+    
+}
+.p-card-main {
+    @include tablet {
+        display: flex;
+        padding: 40px 40px;
+        gap: 40px;
+
+    }
+    @include pc {
+        width: 80vw;
+        padding: 6vw 6vw;
+        flex-wrap: 3vw;
+        gap: 80px;
+
+    }
+}
+
+
+
+
+
+
+
+.p-map {
+    background-image: url(img/map-phone@2x.jpg);
+    background-size: cover;
+    margin: 0;
+    position: relative;
+    @include pc {
+        width: 100%;
+    }
+}
+.p-gray-scale {
+    background-size: cover;
+    background-color: rgba($color: #000000, $alpha: 30%);
+    min-height: 649px;
+    height: 100%;
+    @include tablet {
+        min-height: auto;
+    }
+
+}
+
+
+.p-overlay__map {
+    display: inline-block;
+    background: rgba(0, 0, 0,50%);
+    
+    height: 415px; 
+    @include tablet {
+        height: 100%;
+    }
+    @include pc {
+        width: 50vw;
+        height: 100%;
+    }
+}
+.c-title__map {
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 42px ;
+    margin-left: 42px;
+    @include pc {
+        margin-top: 86px;
+        margin-left: 110px;
+    }
+}
+
+
+.p-line__map {
+    position: relative;
+    display: inline-block;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 40px;
+        width: 75px;
+        height: 3px;
+        background-color: #fff;
+        transform: translateX(-50%);
+        @include pc {
+            bottom: -35px;
+        
+        }
+    }
+}
+
+
+
+
+.c-text__map {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 29px 40px 57px;
+    margin-top: 29px;
+    line-height: 33px;
+    @include pc {
+        margin: 75px 110px 75px;
+    }
+    
+
+}
+
+
+
+
+
+
+
+// archive---------------------------------------------------
+.p-img-archive-top {
+    background-image: url(img/page-title_arcive.jpg);
+    background-size: cover;
+    height: 285px;
+    overflow: hidden;
+    position: relative;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5); /*半透明のフィルターをかける*/
+    }
+    @include pc {
+        width: 100%;
+    }
+}
+
+.p-inner-article__archive {
+    box-sizing: border-box;
+    margin: 0px 20px 18px;
+    @include tablet {
+        margin: 0px 48px 37px;
+    }
+    @include pc {
+        margin: 40px 100px 40px 100px;
+    }
+}
+.c-title__archive-article {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #3c2a10;
+
+}
+.p-text__archive-article {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #3c2a10;
+    
+    @include pc {
+        margin: 0 0 70px 0;
+    }
+
+}
+
+
+.p-title-archive__under-title {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 175px 0 110px 25px;
+    position: absolute;
+    z-index: 2;
+    @include tablet {
+        margin: 148px 0 110px 290px;
+    }
+    
+}
+.p-title-archive-search__under-title {
+    @include tablet {
+        margin: 148px 0 110px 326px;
+    }
+}
+
+
+.p-title__archive-top {
+    color: #fff;
+    font-size: 3.6rem;
+    margin: 122px 0 110px 25px;
+    position: absolute;
+    @include tablet {
+        margin: 106px 0 auto 86px;
+        font-size: 6rem;
+    }
+}
+
+.p-img-archive-top {
+    @include tablet {
+        display: flex;
+    }
+}
+
+.p-media {
+    @include tablet{
+    display: flex;
+    margin: 0 35px 20px;
+    }
+    @include pc {
+        margin: 0 100px 20px;
+        display: flex;
+    }
+}
+
+
+// .p-img-archive-media 
+.wp-post-image {
+    // background-image: url(img/hamburger-card.jpg);
+    // background-size: cover;
+    // background-position: center bottom;
+    height: 230px;
+    margin: 0 20px 0;
+    
+    @include tablet{
+        width: 50%;
+        margin: 0;
+        height: auto;
+        }
+}
+.p-inner-media-archive {
+    @include pc {
+        
+        width: 100%;
+        
+    }
+}
+
+.p-container-media-archive {
+    background-color: #3c2b1c;
+    margin: 0  20px;
+    padding: 32px 16.11px 10px;
+    
+    @include tablet{
+        width: 50%;
+        margin: 0;
+        padding: 32px 59px 10px 35px;
+        }
+    @include pc {
+        padding: 56px 104px 0px 63px;
+    }
+    
+}
+
+.p-title-archive-media {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 21px;
+    @include tablet {
+        font-size: 3rem;
+        margin-bottom: 36px;
+    }
+    @include pc {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+}
+.p-subtitle-archive-media {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 7px;
+    @include pc {
+        font-size: 2.4rem;
+        padding-bottom: 13px;
+    }
+}
+
+.wp-block-heading {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 7px;
+    @include pc {
+        font-size: 2.4rem;
+        padding-bottom: 13px;
+    }
+}
+
+
+.p-container-media-archive > p {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.p-btn-archive-media-detail {
+    background-color: #fff;
+    font-size: 1.6rem;
+    border-radius: 50px;
+    padding: 10px 10px;
+    display: block;
+    margin: 43px auto 40px auto;
+    width: 50%;
+    text-align: center;
+    @include tablet {
+        padding: 11px auto ;
+        margin: 45px auto 40px auto;
+    }
+    @include pc {
+        width: 15vw;
+        text-align: center;
+        padding: 20px 0 ;
+        margin: 60px auto 60px auto;
+
+    }
+}
+
+// ページネーションーーーーーーーーーーーーーーー
+
+.p-inner-archive-mobile-pagenation {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    font-size: 1.6rem;
+    color: #707070;
+    @include tablet {
+        display: none;
+    }
+}
+.p-inner-archive-pagenation {
+    
+        display: none;
+    
+}
+
+.p-inner-archive-pagenation {
+    @include tablet {
+    display: flex;
+    overflow-x: auto;
+    margin: 135px auto 65px;
+    }
+}
+.p-pager__inner {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    :last-child {
+        margin-right: 0;
+    }
+}
+.p-pager__item {
+    margin-right: 15px;
+    
+}
+.p-pager__double-left {
+    font-size: 2.5rem;
+    color: #707070;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.6;
+
+}
+.p-pager__double-right {
+    font-size: 2.5rem;
+    color: #707070;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.6;
+}
+
+
+
+.p-pager__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid currentColor;
+    color: #707070;
+    transition: 25s;
+    font-size: 16px ;
+}
+.p-page {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Roboto serif;
+}
+
+.p-pager__link-active {
+    background-color: #3C2B1C;
+    color: #fff;
+}
+
+// モバイル  ページネーション  ーーーーーーーー
+
+.p-btn-archive__back {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    padding-left: 30px;
+    background: url(img/arrow.jpg)no-repeat;
+
+    
+}
+
+.p-btn-archive__next {
+    top: 50px;
+    position: absolute;
+    right: 20px;
+
+}
+
+// WP pagenavi--------------------
+.wp-pagenavi {
+    display: flex;
+    justify-content: center;
+    margin: 135px auto 65px;
+    align-items: center;
+    font-size: 16px;
+    font-family: Roboto serif;
+}
+
+
+
+
+.current {
+    font-size: 16px;
+    border: 1px solid #bfbfbf;
+    padding: 1px 8px;
+    margin: 10px;
+}
+
+// single & page----------------------------------------------------
+// WP
+.wp-block-cover__background {
+    background-image: url(img/ham-burger-with-vegetables-1639557.png);
+    background-size: cover;
+    height: 225px;
+    overflow: hidden;
+    background-position: center bottom;
+
+    @include tablet {
+        height: 500px;
+    }
+    @include pc {
+        width: 100%;
+    }
+}
+.post-68 .wp-block-heading {
+    color: #3c2a10;
+    font-size: 2rem;
+    margin-top: 36px;
+    margin-left: 5vw;
+    @include tablet {
+        margin-top: 56px;
+    }
+}
+
+.post-68 h2.wp-block-heading{
+    color: #3C2A10;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 34px;
+    margin-left: 5vw;
+    margin-bottom: 25px;
+    @include tablet {
+        margin: 55px auto 55px 5vw;
+    }
+    @include pc {
+        width: 70vw;
+        font-size: 3.6rem;
+        margin: 61px auto 61px 5vw;
+    }
+}
+
+.p-text__single-article {
+    color: #3c2a10;
+    font-size: 1.6rem;
+    margin: 0 5vw;
+
+}
+
+.post-68 p {
+    color: #3c2a10;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.has-text-align-left strong{
+    margin-top: 93px;
+    margin-left: 5vw;
+    @include tablet {
+        font-size: 6rem;
+        // margin-left: 10vw;
+        margin-top: 200px;
+    }
+}
+
+.post-68 h3.wp-block-heading {
+    color: #3c2a10;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 34px;
+    margin-left: 5vw;
+    margin-bottom: 25px;
+    @include tablet {
+        margin: 55px auto 55px 5vw;
+    }
+    @include pc {
+        width: 70vw;
+        font-size: 3.6rem;
+        margin: 61px auto 61px 5vw;
+    }
+}
+
+.wp-block-quote {
+    font-size: 16px;
+    background-color: #f5f5f5;
+    margin: 26px 20px 37px;
+    padding: 30px 5vw;
+    @include tablet {
+        margin: 56px 5vw 56px;
+        padding: 50px 50px 57px;
+    }
+    @include pc {
+        margin: 56px 5vw 56px ;
+        padding: 50px 50px 57px;
+    }
+    cite {
+        display: block;
+        text-decoration:  underline;
+        color: #4A6C9B;
+        letter-spacing: 0.2em;
+        margin-top: 61px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .wp-block-image  {
+//     display: flex;
+//     height: 124px;
+//     @include tablet {
+//         height: 264px;
+//     }
+//     @include pc {
+//         width: 100%;
+//         height: 500px;
+//     }
+// }
+
+//WPメディア上の横広画像
+.post-68 .size-full {
+    display: flex;
+    height: 124px;
+    @include tablet {
+        height: 264px;
+    }
+    @include pc {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+img.wp-image-169 {
+    object-fit: cover;
+    object-position: 50% 100%;
+    margin: 0 5vw;
+    width: 90vw;
+    @include pc {
+        width: 100%;
+        margin: 0 5vw 0;
+        max-width: 100%;
+    }
+}
+
+//WP交互に並んだメディア
+
+.wp-block-media-text {
+
+    align-items: flex-start;
+    margin: 30px 5vw 40px;
+    gap: 10px;
+    @include tablet {
+        margin: 60px 5vw 40px;
+        gap: 21px;
+    }
+    @include pc {
+        gap: 40px;
+    }
+    p {
+        display: flex;
+    }
+}
+
+// .wp-block-media-text {
+//     @include pc {
+//         margin: 60px 5vw ;
+//     }
+// }
+
+.wp-image-170 {
+    height: auto;
+    overflow: hidden;
+    flex-basis: 40%;
+}
+
+
+.p-wrap__single-media {
+    @include pc {
+        margin: 60px 0 ;
+    }
+}
+
+.wp-block-media-text.has-media-on-the-right {
+    grid-template-columns: 1fr 40%;
+}
+
+
+.wp-block-media-text {
+    gap: 40px;
+    vertical-align: top;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+    vertical-align: top;
+    padding: 0;
+
+}
+
+//WPギャラリー上の画像
+
+
+.gallery-image {
+    height: 358px;
+    margin: auto;
+    margin-bottom: 231px;
+    object-fit: contain;
+    // max-width: 581px;
+    @include pc {
+        margin: 0 auto 60px ;
+    }
+}
+
+
+
+.wp-image-171 {
+    display: block;
+    object-fit: cover;
+    margin: 0 auto 30px;
+    width: 70vw;
+    max-width: 581px;
+    @include tablet {
+        margin-bottom: 231px;
+        height: 358px;
+        width: 581px;
+    }
+    @include pc {
+        width: 35vw;
+        margin: 0 auto 60px ;
+    }
+}
+
+// WPギャラリーの画像
+// img.wp-image-183 {
+//     object-fit: cover;
+//     margin: 0 5vw 20px;
+//     width: 90vw;
+//     @include tablet {
+//         margin: 0;
+        
+//     }
+// }
+
+// figure.wp-block-gallery-3 {
+//     @include tablet {
+//         display: grid;
+//         width: 88vw;
+//         margin: 0 5vw;
+//         gap: 1.5vw;
+//         grid-template-columns: 44vw 44vw;
+//     }
+//     @include pc {
+//         display: grid;
+//         width: 70vw;
+//         grid-template-columns: 22vw 22vw 22vw;
+//         margin: 0 auto 0;
+//     }  
+// }
+
+figure.wp-block-gallery-3 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    
+
+    @include tablet {
+        
+        grid-template-columns: 1fr 1fr;
+        width: 88vw;
+        margin: 0 5vw
+        
+    }
+    @include pc {
+        
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 70vw;
+        margin: 0 auto 0;
+    }  
+}
+
+// WP ギャラリー画像
+
+figure.wp-block-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+// .gallery-columns-2 .gallery-item { /** 2カラム **/
+    
+//     width: 48%;
+//     margin: 0 1%;
+    
+// }
+
+// .wp-block-gallery.has-nested-images figure.wp-block-image {
+//     flex-grow: 0;
+// }
+
+
+
+
+
+
+
+
+//WPリスト---------
+
+// .p-list__single 
+.post-68 ul{
+    font-size: 16px;
+    color: #3C2A10;
+    @include tablet {
+        margin: 17px 6vw ;
+    }
+    @include pc {
+        width: 60vw;
+    }
+}
+.p-list-ol__single {
+    padding-left: 3em;
+    
+}
+.p-list-ul__single {
+    padding-left: 1.5em;
+}
+
+ol {
+    padding-left: 0;
+}
+
+.p-child-ol-list__single {
+    margin: 20px 1.5em 20px;
+
+}
+.p-child-ul-list__single {
+    margin: 20px 1em 20px;
+}
+
+.p-wrapper__list-upper {
+    padding-bottom: 57px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+// ---------------------------------
+
+// WPタグのリスト-------------------------------------------------------
+// .p-container__tag-list-single
+.post-68 .tag-list {
+    font-size: 16px;
+    background-color: #f5f5f5;
+    margin:30px 5vw 60px 5vw;
+    padding: 60px 3vw ;
+    overflow: hidden;
+    @include pc {
+        width: 70vw;
+    }
+}
+// .p-child-list__tag
+.post-68 .taglist br {
+    margin-left: 2.5em;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.p-img__single-top {
+    background-image: url(img/ham-burger-with-vegetables-1639557.png);
+    background-size: cover;
+    height: 225px;
+    overflow: hidden;
+    background-position: center bottom;
+
+    @include tablet {
+        height: 500px;
+    }
+    @include pc {
+        width: 100%;
+    }
+}
+
+// page-top-img
+.p-img__page-top {
+    background-image: url(img/page-title_shop@2x.jpg);
+    background-size: cover;
+    height: 225px;
+    overflow: hidden;
+    @include tablet {
+        height: 500px;
+    }
+    @include pc {
+        width: 100%;
+    }
+
+}
+
+.p-title__single-top {
+    margin-top: 93px;
+    margin-left: 5vw;
+    @include tablet {
+        font-size: 6rem;
+        // margin-left: 10vw;
+        margin-top: 200px;
+    }
+}
+
+
+
+
+
+.p-title__single-article {
+    color: #3c2a10;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 34px;
+    margin-left: 5vw;
+    margin-bottom: 25px;
+    @include tablet {
+        margin: 55px auto 55px 5vw;
+    }
+    @include pc {
+        width: 70vw;
+        font-size: 3.6rem;
+        margin: 61px auto 61px 5vw;
+    }
+
+}
+
+.p-text__single-article {
+    color: #3c2a10;
+    font-size: 1.6rem;
+    margin: 0 5vw;
+
+}
+
+
+
+
+
+
+.p-title__single-heading-list {
+    color: #3c2a10;
+    font-size: 2.4rem;
+    margin-top: 36px;
+    margin-left: 5vw;
+    @include tablet {
+        margin: 62px auto 62px 5vw ;
+    }
+    @include pc {
+        width: 70vw;
+        margin: 62px auto 62px 5vw ;
+        font-size: 2.6rem;
+    }
+}
+
+
+.p-heading__single-heading-list {
+    color: #3c2a10;
+    font-size: 2rem;
+    margin-top: 36px;
+    margin-left: 5vw;
+    @include tablet {
+        margin-top: 56px;
+    }
+}
+.p-heading-list {
+    @include pc {
+        // width: 80vw;
+        margin: 0 5vw 0 0;
+
+    }
+}
+.p-container__block-quote {
+    background-color: #f5f5f5;
+    margin: 26px 20px 37px;
+    padding: 30px 5vw;
+    @include tablet {
+        margin: 56px 5vw 56px;
+        padding: 50px 50px 57px;
+    }
+    @include pc {
+        margin: 56px 5vw 56px ;
+        padding: 50px 50px 57px;
+    }
+}
+.p-text__single-block-quote {
+    color: #3c2a10;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+
+
+.p-block-quote__single {
+    color: #3c2a10;
+    font-size: 1.6rem;
+    margin-top: 3px;
+    word-break: break-all;
+    @include tablet {
+        margin-top: 60px;
+        
+    }
+    a {
+    text-decoration:  underline;
+    color: #4A6C9B;
+    letter-spacing: 0.2em;
+    }
+}
+
+
+.p-wrapper__single-img-top {
+    display: flex;
+    height: 124px;
+    @include tablet {
+        height: 264px;
+    }
+    @include pc {
+        width: 100%;
+        height: 500px;
+    }
+
+}
+.p-wrap__single-media {
+    @include pc {
+        margin: 60px 0 ;
+    }
+}
+
+.p-img__single-media-under {
+    display: block;
+    object-fit: cover;
+    margin: 0 auto 30px;
+    width: 70vw;
+    @include tablet {
+        margin-bottom: 231px;
+    }
+    @include pc {
+        width: 40%;
+        margin: 0 auto 60px ;
+    }
+}
+
+
+
+
+
+
+
+.p-img__single-media-top {
+    object-fit: cover;
+    object-position: 50% 100%;
+    margin: 0 5vw;
+    width: 90vw;
+    @include pc {
+        width: 100%;
+        margin: 0 5vw 0;
+    }
+    
+}
+
+.p-media__single {
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 5vw 40px;
+    gap: 10px;
+    @include tablet {
+        margin: 60px 5vw 40px;
+        gap: 21px;
+    }
+    @include pc {
+        gap: 40px;
+    }
+}
+
+.p-img__single-media {
+    height: auto;
+    overflow: hidden;
+    flex-basis: 40%;
+}
+.p-text__single-media {
+    font-size: 16px;
+    flex-basis: 60%;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+
+.p-img__single-gallery {
+    object-fit: cover;
+    margin: 0 5vw 20px;
+    width: 90vw;
+    @include tablet {
+        margin: 0;
+        
+    }
+}
+
+.p-img-section__single {
+    @include tablet {
+        display: grid;
+        width: 88vw;
+        margin: 0 5vw;
+        gap: 1.5vw;
+        grid-template-columns: 44vw 44vw;
+    }
+    @include pc {
+        width: 70vw;
+        grid-template-columns: 22vw 22vw 22vw;
+        margin: 0 auto 0;
+    }  
+}
+
+
+
+// ネストされたリスト-------------------------------------------------------
+
+
+.p-list__single {
+    font-size: 16px;
+    color: #3C2A10;
+    @include tablet {
+        margin: 63px 6vw ;
+    }
+    @include pc {
+        width: 60vw;
+    }
+}
+.p-list-ol__single {
+    padding-left: 3em;
+    
+}
+.p-list-ul__single {
+    padding-left: 1.5em;
+}
+
+ol {
+    padding-left: 0;
+}
+
+.p-child-ol-list__single {
+    margin: 20px 1.5em 20px;
+
+}
+.p-child-ul-list__single {
+    margin: 20px 1em 20px;
+}
+
+.p-wrapper__list-upper {
+    padding-bottom: 57px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+// タグのリスト-------------------------------------------------------
+.p-container__tag-list-single {
+    font-size: 16px;
+    background-color: #f5f5f5;
+    margin:30px 5vw 60px 5vw;
+    padding: 60px 3vw ;
+    overflow: hidden;
+    @include pc {
+        width: 70vw;
+    }
+}
+.p-child-list__tag {
+    margin-left: 2.5em;
+    margin-bottom: 0;
+}
+// テーブル------------------------------------------------------
+.p-container__single-table {
+    width: 90vw;
+    font-size: 16px;
+    margin: 5px 5vw 60px;
+    @include pc {
+        width: 70vw;
+    }
+}
+
+.p-table__single {
+    margin: auto;
+    td {
+        padding: 30px 30px;
+        width: 30vw;
+    }
+}
+.p-table__single tr td:nth-child(2) {
+    width: 60vw;
+}
+
+
+// ----------------------------------------------------------
+
+.p-button__single-under-main {
+    display: block;
+    margin: 30px 5vw ;
+    width: 90%;
+    max-width: 429px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(to right, #F2EDE9,#DED8D3 );
+    color: #3C2A10;  
+    border-radius: 20px;
+    @include pc {
+        margin-bottom: 60px;
+    }
+
+}
+// -------------------------------------------------------
+.p-wrapper-text__single-under-btn {
+    display: block;
+    margin:40px 5vw 80px;
+    word-wrap: break-word;
+    @include pc {
+        width: 70vw;
+    }
+}
+
+.p-text__single-under-btn {
+    
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    @include tablet {
+        margin-bottom: 150px;
+    }
+    @include pc {
+        margin-bottom: 274px;
+    }
+}
+
+
+

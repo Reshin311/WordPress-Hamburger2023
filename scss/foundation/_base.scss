@@ -1,0 +1,33 @@
+
+html {
+    font-size: 62.5%;
+    font-family: 'M PLUS 1', sans-serif;
+
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table th, table td {
+	border: solid 1px black;
+}

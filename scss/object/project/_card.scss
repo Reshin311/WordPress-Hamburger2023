@@ -1,0 +1,15 @@
+@use "../../foundation/mixin" as *;
+
+
+
+
+.p-card {
+    margin: 20px 5vw;
+    background-size: cover;
+    // overflow: hidden;
+    @include tablet {
+        margin: 0;
+    }
+
+    
+}
