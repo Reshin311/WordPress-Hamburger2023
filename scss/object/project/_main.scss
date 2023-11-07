@@ -605,8 +605,9 @@ color: #3C2A10;
 .post-68 p {
     color: #3c2a10;
     font-size: 1.6rem;
-    margin: 0;
+    margin: 0 5vw;
 }
+
 
 .has-text-align-left strong{
     margin-top: 93px;
@@ -655,6 +656,10 @@ color: #3C2A10;
         letter-spacing: 0.2em;
         margin-top: 61px;
         }
+    p {
+        font-size: 1.6rem;
+        margin: 0;
+    }
 }
 
 
@@ -729,14 +734,15 @@ img.wp-image-169 {
     }
     p {
         display: flex;
+        margin: 0;
     }
 }
 
-// .wp-block-media-text {
-//     @include pc {
-//         margin: 60px 5vw ;
-//     }
-// }
+.post-68 .wp-block-media-text {
+    @include mobile {
+    grid-template-columns: 40% auto!important;
+    }
+}
 
 .wp-image-170 {
     height: auto;
@@ -801,6 +807,22 @@ img.wp-image-169 {
 }
 
 // WPギャラリーの画像
+
+.post-68 .wp-block-gallery.has-nested-images.columns-default.is-cropped.wp-block-gallery-3.is-layout-flex.wp-block-gallery-is-layout-flex figure.wp-block-image.size-large {
+    width: 100%!important;
+    
+}
+
+figure .wp-block-gallery-3 {
+    gap: 10px!important;
+}
+
+
+
+
+
+
+
 // img.wp-image-183 {
 //     object-fit: cover;
 //     margin: 0 5vw 20px;
@@ -884,6 +906,7 @@ figure.wp-block-image {
 .post-68 ul{
     font-size: 16px;
     color: #3C2A10;
+    margin: 17px 6vw;
     @include tablet {
         margin: 17px 6vw ;
     }
@@ -936,7 +959,90 @@ ol {
     margin-bottom: 0;
 }
 
+// WPテーブル------------------------------------------------------
+//.p-container__single-table
+.wp-block-table {
+    width: 90vw;
+    font-size: 16px;
+    margin: 5px 5vw 60px;
+    @include pc {
+        width: 70vw;
+    }
+}
 
+//.p-table__single tr td:nth-child(2)
+.td{
+    width: 60vw;
+}
+
+//.p-table__single
+.has-text-align-left td{
+    margin: auto;
+    td {
+        padding: 30px 30px;
+        width: 30vw;
+    }
+}
+
+// WPリスト下のボタン----------------------------------------------------------
+
+.wp-block-buttons {
+    
+    margin: 30px 5vw ;
+}
+
+
+.post-68 .wp-block-button {
+    cursor: pointer;
+    background-color: #d5d5d5;
+    border:1px solid #707070;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #707070;
+    }
+//.p-button__single-under-main
+
+
+.post-68 .wp-block-button__link .wp-element-button{
+    display: block;
+    margin: 30px 5vw ;
+    width: 90%;
+    max-width: 429px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(to right, #F2EDE9,#DED8D3 );
+    color: #3C2A10;  
+    border-radius: 20px;
+    @include pc {
+        margin-bottom: 60px;
+    }
+}
+
+
+// WPボタン下のテキスト-------------------------------------------------------
+.p-wrapper-text__single-under-btn {
+    display: block;
+    margin:40px 5vw 80px;
+    word-wrap: break-word;
+    @include pc {
+        width: 70vw;
+    }
+}
+
+//.p-text__single-under-btn
+.post-68 p {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    @include tablet {
+        margin-bottom: 150px;
+    }
+    @include pc {
+        margin-bottom: 274px;
+    }
+}
 
 
 

@@ -23,14 +23,20 @@ function custom_theme_support(){
     add_theme_support('editor-styles');
     add_editor_style();
 
-    // WPのギャラリーCSSを無効化
-add_filter( 'use_default_gallery_style', '__return_false' );
 
 }
 //必要な機能を設定しafter_setup_themeのアクションフックにて実行
 add_action('after_setup_theme','custom_theme_support');
 
+//WPのギャラリーCSSを無効化
+add_filter(
+    "use_default_gallery_style",
+    "disable_default_gallery_style"
+);
 
+function disable_default_gallery_style() {
+    return false;
+}
 
 
 
@@ -102,3 +108,8 @@ function wpbeg_widgets_init() {
     );
 }
 add_action( 'widgets_init', 'wpbeg_widgets_init' );
+
+
+//本体ギャラリーCSS停止
+add_filter( 'use_default_gallery_style', '__return_false' );
+
