@@ -6,7 +6,7 @@
 
 <!-- Main-------------------------------------------------------------------------------- -->
 <main class="l-main">
-<!-- <h2 class="p-single-visual__text c-title"><?php echo esc_html( get_the_title() ); ?></h2> -->
+<h2 class="p-title__single-top c-title"><?php echo esc_html( get_the_title() ); ?></h2>
 
 
 
@@ -15,8 +15,12 @@
         while( have_posts() ) :
             the_post(); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                
+            <?php the_post_thumbnail('full'); ?>
+
+            <div class="wrapper-single-content">
                 <?php the_content(); ?>
+            </div><!-- /.wrapper-single-content -->
+
                 <?php $args = array (
                     'before' => '<div class="page-split">',
                     'after' => '</div>',

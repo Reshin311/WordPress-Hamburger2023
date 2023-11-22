@@ -39,7 +39,7 @@
     <article class="p-media p-media-archive p-media-archive__1">
         
         <?php if(has_post_thumbnail()): ?>
-            <?php the_post_thumbnail('medium'); ?>
+            <?php the_post_thumbnail('full'); ?>
         <?php else: ?>
             <img src="<?php echo esc_url(get_theme_file_uri('img/hamburger-card.jpg')); ?>" alt="" class="wp-post-image">
         <?php endif; ?>
@@ -49,7 +49,7 @@
                 <a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a>
             </h3><!-- /.title-archive-media -->
                 
-            <!-- <?php the_content(); ?> -->
+            
             <?php the_excerpt(); ?>
 
             <a class="p-btn-archive-media-detail" href="<?php echo esc_url(get_permalink()); ?>">詳しく見る</a>

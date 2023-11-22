@@ -113,3 +113,51 @@ add_action( 'widgets_init', 'wpbeg_widgets_init' );
 //本体ギャラリーCSS停止
 add_filter( 'use_default_gallery_style', '__return_false' );
 
+function SearchFilter($query) {
+    if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
+    $query->set( 'post_type', 'post' );
+    }
+    }
+    add_action( 'pre_get_posts','SearchFilter' );
+
+
+// 検索対象にカテゴリを含める
+//-----------------------------------------------------
+function custom_search($search, $wp_query) {
+    global $wpdb;
+ 
+    //検索ページ以外
+    if (!$wp_query->is_search)
+    return $search;
+ 
+    if (!isset($wp_query->query_vars))
+    return $search;
+ 
+    $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
+    if ( count($search_words) > 0 ) {
+        $search = '';
+        foreach ( $search_words as $word ) {
+            if ( !empty($word) ) {
+                $search_word = $wpdb-> _escape("%{$word}%");
+                $search .= " AND (
+                        {$wpdb->posts}.post_title LIKE '{$search_word}'
+                        OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+            /*タグ名・カテゴリ名を検索対象に含める記述 start*/
+                        OR {$wpdb->posts}.ID IN (
+                            SELECT distinct r.object_id
+                            FROM {$wpdb->term_relationships} AS r
+                            INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
+                            INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
+                            WHERE t.name LIKE '{$search_word}'
+                        OR t.slug LIKE '{$search_word}'
+                        OR tt.description LIKE '{$search_word}'
+                        )
+          /*タグ名・カテゴリ名を検索対象に含める記述 end*/
+                ) ";
+            }
+        }
+    }
+ 
+    return $search;
+}
+add_filter('posts_search','custom_search', 10, 2);

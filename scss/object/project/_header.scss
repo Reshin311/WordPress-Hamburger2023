@@ -91,7 +91,8 @@
 
 
 // WP-------------------------------------------------
-.search-form {
+// .search-form 
+    .p-search-form {
     display: flex;
     justify-content: center;
     margin:40px 7vw 39px;
@@ -105,7 +106,8 @@
         margin: auto 2vw auto auto ;
     }
 }
-.search-field {
+// .search-field
+    .p-search-form__keyword {
     max-width: 400px;
     width: 55vw;
     height: 46px;
@@ -132,7 +134,8 @@
 
 
 
-.search-submit {
+// .search-submit 
+input.p-search-form__submit {
     height: 46px;
     max-width: 136px;
     

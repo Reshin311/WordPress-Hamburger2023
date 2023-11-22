@@ -7,7 +7,7 @@
 <main class="l-main">
     <section class="p-img-archive-top p-img-archive-search-top">
         <h2 class="p-title__archive-top p-title_arachive-search-top">Search:</h2><!-- /.p-title_header-top -->
-        <small class="p-title-archive__under-title p-title-archive-search__under-title">チーズバーガー</small><!-- /.p-title-archive_under-title -->
+        <small class="p-title-archive__under-title p-title-archive-search__under-title"><?php the_search_query(); ?></small><!-- /.p-title-archive_under-title -->
     </section>
     
     <article class="p-inner-article__archive p-inner-article__archive-search">
