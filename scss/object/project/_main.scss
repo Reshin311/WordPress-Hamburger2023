@@ -351,12 +351,9 @@ color: #3C2A10;
 
 
 
-
+//archiveのカードの画像「singleのトップ画像に影響ーーーーーーーーーーー
 // .p-img-archive-media 
 .wp-post-image {
-    // background-image: url(img/hamburger-card.jpg);
-    // background-size: cover;
-    // background-position: center bottom;
     height: 230px;
     margin: 0 20px 0;
     
@@ -376,9 +373,9 @@ color: #3C2A10;
         
     }
 }
-//検索結果がない時
-.p-inner-media-archive-search p{
-    margin-left: 100px;
+//検索結果がない時 カードに影響
+.p-inner-media-archive-search {
+    padding-left: 50px;
     font-size: 20px;
 }
 
@@ -583,6 +580,45 @@ color: #3C2A10;
 
 // single & page----------------------------------------------------
 // WP
+
+.wp-block-cover__inner-container {
+    padding-left: 5vw;
+}
+
+.p-title__single-top,
+p.has-text-align-left .has-text-align-left  {
+    margin-top: 93px;
+    margin-left: 5vw;
+    font-size: 3.6rem;
+    @include tablet {
+        font-size: 6rem;
+        // margin-left: 10vw;
+        margin-top: 200px;
+    }
+    @include pc {
+        font-size: 6rem;
+    }
+}
+
+.wp-block-cover__inner-container p.has-text-align-left  {
+    display: inline-block;
+    margin-top: 93px;
+    margin-left: 5vw;
+    font-size: 3.6rem;
+    @include tablet {
+        font-size: 6rem;
+        margin-left: 10vw;
+        margin-top: 0;
+    }
+    @include pc {
+        font-size: 6rem;
+    }
+}
+
+
+
+
+
 // .wp-block-cover__background
 .post-68 img.attachment-full {
     // background-image: url(img/ham-burger-with-vegetables-1639557.png);
@@ -593,6 +629,7 @@ color: #3C2A10;
     // object-position: 50% 50%;
     // background-position: center bottom;
     width: 100%;
+    margin: 0;
 
     @include tablet {
         height: 500px;
@@ -625,6 +662,7 @@ color: #3C2A10;
     margin-bottom: 25px;
     @include tablet {
         margin: 55px auto 55px 5vw;
+        font-size: 3.6rem;
     }
     @include pc {
         width: 70vw;
@@ -637,8 +675,13 @@ color: #3C2A10;
     color: #3c2a10;
     font-size: 1.6rem;
     margin: 0 5vw;
-
 }
+
+
+
+
+
+
 
 .post-68 p,
 .post-188 p{
@@ -646,6 +689,14 @@ color: #3C2A10;
     font-size: 1.6rem;
     margin: 0 5vw;
 }
+.post-208 p{
+    color: #3c2a10;
+    font-size: 1.6rem;
+    margin: 40px 5vw;
+}
+
+
+
 
 
 .has-text-align-left strong{
@@ -661,17 +712,19 @@ color: #3C2A10;
 .post-68 h3.wp-block-heading,
 .post-188 h3.wp-block-heading {
     color: #3c2a10;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: bold;
     margin-top: 34px;
     margin-left: 5vw;
     margin-bottom: 25px;
     @include tablet {
         margin: 55px auto 55px 5vw;
+        font-size: 2.8rem;
     }
     @include pc {
         width: 70vw;
-        font-size: 3.6rem;
+        font-size: 2.8rem;
+        
         margin: 61px auto 61px 5vw;
     }
 }
@@ -705,22 +758,6 @@ color: #3C2A10;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // .wp-block-image  {
 //     display: flex;
 //     height: 124px;
@@ -734,8 +771,10 @@ color: #3C2A10;
 // }
 
 //WPメディア上の横広画像
-.post-68 .size-full,
-.post-188 .size-full {
+.post-68 figure.p-wp-image__media,
+.post-188 figure.p-wp-image__media {
+    
+
     display: flex;
     height: 124px;
     object-position: 50% 90%;
@@ -754,7 +793,9 @@ img.wp-image-350 {
     object-position: 50% 100%;
     margin: 0 5vw;
     width: 90vw;
+    height: 100%;
     @include pc {
+        height: 100%;
         width: 100%;
         margin: 0 5vw 0;
         max-width: 100%;
@@ -769,7 +810,7 @@ img.wp-image-350 {
     margin: 30px 5vw 40px;
     gap: 10px;
     @include tablet {
-        margin: 60px 5vw 40px;
+        margin: 60px 5vw 110px;
         gap: 21px;
     }
     @include pc {
@@ -821,17 +862,20 @@ img.wp-image-350 {
 //WPギャラリー上の画像
 
 
-.gallery-image,
-.wp-gallery-main-image .size-full {
-    height: 358px;
-    margin: auto;
-    margin-bottom: 231px;
-    object-fit: contain;
-    // max-width: 581px;
-    @include pc {
-        margin: 0 auto 60px ;
-    }
-}
+// .gallery-image,
+// .wp-gallery-main-image .size-full {
+//     height: 358px;
+//     margin: auto;
+//     margin-bottom: 231px;
+//     object-fit: contain;
+//     // max-width: 581px;
+//     @include tablet {
+//         margin: 0 auto 241px;
+//     }
+//     @include pc {
+//         margin: 0 auto 60px ;
+//     }
+// }
 
 .wp-block-galley {
     gap: 20px;
@@ -857,108 +901,26 @@ img.wp-image-350 {
 
 // WPギャラリーの画像------------------------------------
 
-// img.wp-image-183 {
-//     object-fit: cover;
-//     margin: 0 5vw 20px;
-//     width: 90vw;
-//     @include tablet {
-//         margin: 0;
-        
-//     }
-// }
 
-// figure.wp-block-gallery-3 {
-//     @include tablet {
-//         display: grid;
-//         width: 88vw;
-//         margin: 0 5vw;
-//         gap: 1.5vw;
-//         grid-template-columns: 44vw 44vw;
-//     }
-//     @include pc {
-//         display: grid;
-//         width: 70vw;
-//         grid-template-columns: 22vw 22vw 22vw;
-//         margin: 0 auto 0;
-//     }  
-// }
-
-
-// 一旦削除ーーーーーーーーーーーーーーーーーー
-// .wrapper-single-content .wp-block-galley__single {
-//     display: grid;
-//     gap: 16px;
-//     grid-template-columns: 1fr;
-    
-
-//     @include tablet {
-        
-//         grid-template-columns: 1fr 1fr;
-//         width: 88vw;
-//         margin: 0 5vw
-        
-//     }
-//     @include pc {
-        
-//         grid-template-columns: 1fr 1fr 1fr;
-//         width: 70vw;
-//         margin: 0 auto 0;
-//         gap: 20px;
-//     }  
-// }
-
-// // WP ギャラリー画像
-
-// figure.wp-block-image {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
-// .wp-block-galley__single {
-//     gap: 30px;
-
-// }
-
-// 一旦削除ここまでーーーーーーーーーーー
-.wrapper-single-content .wp-block-galley__single {
+.wrapper-single-content .wp-block-galley__single,
+.wp-block-gallery.wp-block-gallery-2 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 16px;
+        grid-template-columns: 1fr;
+        gap: 20px !important;
+        margin: 0 20px;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            gap: 16px !important;
+            margin: 0 60px;
+        }
+        @include pc {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px !important;
+            margin: 0 100px;
+        }
     
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .gallery-columns-2 .gallery-item { /** 2カラム **/
     
-//     width: 48%;
-//     margin: 0 1%;
-    
-// }
-
-// .wp-block-gallery.has-nested-images figure.wp-block-image {
-//     flex-grow: 0;
-// }
-
-
-
-
-
-
-
 
 //WPリスト---------
 
@@ -968,9 +930,9 @@ img.wp-image-350 {
     font-size: 16px;
     color: #3C2A10;
     margin: 17px 6vw;
-    @include tablet {
-        margin: 17px 6vw ;
-    }
+    // @include tablet {
+    //     margin: 17px 6vw ;
+    // }
     @include pc {
         width: 60vw;
     }
@@ -1000,6 +962,22 @@ ol {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+.post-68 ul.wp-list1-single,
+.post-188 ul.wp-list1-single {
+    @include tablet {
+        margin: 61px 6vw;
+    }
+    
+}
+.post-68 ul.wp-list2-single,
+.post-188 ul.wp-list2-single {
+    @include tablet {
+        margin-bottom: 61px;
+    }
+}
+
+
 // ---------------------------------
 
 // WPタグのリスト-------------------------------------------------------
@@ -1055,10 +1033,14 @@ table tr td:nth-child(2) {
 }
 
 
+.wp-block-buttons>.wp-block-button.wp-block-button__width-50{
+    @include mobile {
+        width: 100%!important;
+    }
+
+}
 
 //.p-button__single-under-main
-
-
 .wp-block-button a {
     cursor: pointer;
     border:1px solid #707070;
@@ -1075,6 +1057,7 @@ table tr td:nth-child(2) {
     @include pc {
         margin-bottom: 60px;
     }
+    
 }
 
 
@@ -1096,9 +1079,12 @@ table tr td:nth-child(2) {
     
 }
 
-.post-68 p.wp-archive-last-text {
+.post-68 p.wp-archive-last-text,
+.post-188 p.wp-archive-last-text {
+    margin-bottom: 69px;
     @include tablet {
         margin-bottom: 150px;
+        margin-top: 61px;
     }
     @include pc {
         margin-bottom: 274px;
@@ -1146,15 +1132,7 @@ table tr td:nth-child(2) {
 
 }
 
-.p-title__single-top {
-    margin-top: 93px;
-    margin-left: 5vw;
-    @include tablet {
-        font-size: 6rem;
-        // margin-left: 10vw;
-        margin-top: 200px;
-    }
-}
+
 
 
 

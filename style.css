@@ -599,8 +599,8 @@ body {
   }
 }
 
-.p-inner-media-archive-search p {
-  margin-left: 100px;
+.p-inner-media-archive-search {
+  padding-left: 50px;
   font-size: 20px;
 }
 
@@ -804,11 +804,55 @@ body {
   margin: 10px;
 }
 
+.wp-block-cover__inner-container {
+  padding-left: 5vw;
+}
+
+.p-title__single-top,
+p.has-text-align-left .has-text-align-left {
+  margin-top: 93px;
+  margin-left: 5vw;
+  font-size: 3.6rem;
+}
+@media screen and (min-width: 768px) {
+  .p-title__single-top,
+p.has-text-align-left .has-text-align-left {
+    font-size: 6rem;
+    margin-top: 200px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .p-title__single-top,
+p.has-text-align-left .has-text-align-left {
+    font-size: 6rem;
+  }
+}
+
+.wp-block-cover__inner-container p.has-text-align-left {
+  display: inline-block;
+  margin-top: 93px;
+  margin-left: 5vw;
+  font-size: 3.6rem;
+}
+@media screen and (min-width: 768px) {
+  .wp-block-cover__inner-container p.has-text-align-left {
+    font-size: 6rem;
+    margin-left: 10vw;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wp-block-cover__inner-container p.has-text-align-left {
+    font-size: 6rem;
+  }
+}
+
 .post-68 img.attachment-full {
   height: 225px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .post-68 img.attachment-full {
@@ -847,6 +891,7 @@ body {
   .post-68 h2.wp-block-heading,
 .post-188 h2.wp-block-heading {
     margin: 55px auto 55px 5vw;
+    font-size: 3.6rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -871,6 +916,12 @@ body {
   margin: 0 5vw;
 }
 
+.post-208 p {
+  color: #3c2a10;
+  font-size: 1.6rem;
+  margin: 40px 5vw;
+}
+
 .has-text-align-left strong {
   margin-top: 93px;
   margin-left: 5vw;
@@ -885,7 +936,7 @@ body {
 .post-68 h3.wp-block-heading,
 .post-188 h3.wp-block-heading {
   color: #3c2a10;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: bold;
   margin-top: 34px;
   margin-left: 5vw;
@@ -895,13 +946,14 @@ body {
   .post-68 h3.wp-block-heading,
 .post-188 h3.wp-block-heading {
     margin: 55px auto 55px 5vw;
+    font-size: 2.8rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .post-68 h3.wp-block-heading,
 .post-188 h3.wp-block-heading {
     width: 70vw;
-    font-size: 3.6rem;
+    font-size: 2.8rem;
     margin: 61px auto 61px 5vw;
   }
 }
@@ -936,22 +988,22 @@ body {
   margin: 0;
 }
 
-.post-68 .size-full,
-.post-188 .size-full {
+.post-68 figure.p-wp-image__media,
+.post-188 figure.p-wp-image__media {
   display: flex;
   height: 124px;
   -o-object-position: 50% 90%;
      object-position: 50% 90%;
 }
 @media screen and (min-width: 768px) {
-  .post-68 .size-full,
-.post-188 .size-full {
+  .post-68 figure.p-wp-image__media,
+.post-188 figure.p-wp-image__media {
     height: 264px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .post-68 .size-full,
-.post-188 .size-full {
+  .post-68 figure.p-wp-image__media,
+.post-188 figure.p-wp-image__media {
     width: 100%;
     height: 500px;
   }
@@ -964,9 +1016,11 @@ img.wp-image-350 {
      object-position: 50% 100%;
   margin: 0 5vw;
   width: 90vw;
+  height: 100%;
 }
 @media screen and (min-width: 1280px) {
   img.wp-image-350 {
+    height: 100%;
     width: 100%;
     margin: 0 5vw 0;
     max-width: 100%;
@@ -980,7 +1034,7 @@ img.wp-image-350 {
 }
 @media screen and (min-width: 768px) {
   .wp-block-media-text {
-    margin: 60px 5vw 40px;
+    margin: 60px 5vw 110px;
     gap: 21px;
   }
 }
@@ -1028,21 +1082,6 @@ img.wp-image-350 {
   padding: 0;
 }
 
-.gallery-image,
-.wp-gallery-main-image .size-full {
-  height: 358px;
-  margin: auto;
-  margin-bottom: 231px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-@media screen and (min-width: 1280px) {
-  .gallery-image,
-.wp-gallery-main-image .size-full {
-    margin: 0 auto 60px;
-  }
-}
-
 .wp-block-galley {
   gap: 20px;
 }
@@ -1072,10 +1111,28 @@ img.wp-image-350 {
   }
 }
 
-.wrapper-single-content .wp-block-galley__single {
+.wrapper-single-content .wp-block-galley__single,
+.wp-block-gallery.wp-block-gallery-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 20px !important;
+  margin: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper-single-content .wp-block-galley__single,
+.wp-block-gallery.wp-block-gallery-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px !important;
+    margin: 0 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wrapper-single-content .wp-block-galley__single,
+.wp-block-gallery.wp-block-gallery-2 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px !important;
+    margin: 0 100px;
+  }
 }
 
 .post-68 ul,
@@ -1083,12 +1140,6 @@ img.wp-image-350 {
   font-size: 16px;
   color: #3C2A10;
   margin: 17px 6vw;
-}
-@media screen and (min-width: 768px) {
-  .post-68 ul,
-.post-188 ul {
-    margin: 17px 6vw;
-  }
 }
 @media screen and (min-width: 1280px) {
   .post-68 ul,
@@ -1121,6 +1172,20 @@ ol {
   padding-bottom: 57px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .post-68 ul.wp-list1-single,
+.post-188 ul.wp-list1-single {
+    margin: 61px 6vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .post-68 ul.wp-list2-single,
+.post-188 ul.wp-list2-single {
+    margin-bottom: 61px;
+  }
 }
 
 .post-68 .tag-list,
@@ -1171,6 +1236,12 @@ table tr td:nth-child(2) {
   margin: 30px 5vw;
 }
 
+@media screen and (max-width: 768px) {
+  .wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
+    width: 100% !important;
+  }
+}
+
 .wp-block-button a {
   cursor: pointer;
   border: 1px solid #707070;
@@ -1206,13 +1277,20 @@ table tr td:nth-child(2) {
   font-style: normal;
 }
 
+.post-68 p.wp-archive-last-text,
+.post-188 p.wp-archive-last-text {
+  margin-bottom: 69px;
+}
 @media screen and (min-width: 768px) {
-  .post-68 p.wp-archive-last-text {
+  .post-68 p.wp-archive-last-text,
+.post-188 p.wp-archive-last-text {
     margin-bottom: 150px;
+    margin-top: 61px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .post-68 p.wp-archive-last-text {
+  .post-68 p.wp-archive-last-text,
+.post-188 p.wp-archive-last-text {
     margin-bottom: 274px;
   }
 }
@@ -1249,17 +1327,6 @@ table tr td:nth-child(2) {
 @media screen and (min-width: 1280px) {
   .p-img__page-top {
     width: 100%;
-  }
-}
-
-.p-title__single-top {
-  margin-top: 93px;
-  margin-left: 5vw;
-}
-@media screen and (min-width: 768px) {
-  .p-title__single-top {
-    font-size: 6rem;
-    margin-top: 200px;
   }
 }
 

@@ -34,9 +34,9 @@ add_filter(
     "disable_default_gallery_style"
 );
 
-function disable_default_gallery_style() {
-    return false;
-}
+// function disable_default_gallery_style() {
+    // return false;
+// }
 
 
 
@@ -111,7 +111,7 @@ add_action( 'widgets_init', 'wpbeg_widgets_init' );
 
 
 //本体ギャラリーCSS停止
-add_filter( 'use_default_gallery_style', '__return_false' );
+// add_filter( 'use_default_gallery_style', '__return_false' );
 
 function SearchFilter($query) {
     if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
