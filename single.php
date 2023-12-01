@@ -6,7 +6,7 @@
 
 <!-- Main-------------------------------------------------------------------------------- -->
 <main class="l-main">
-<h2 class="p-title__single-top c-title"><?php echo esc_html( get_the_title() ); ?></h2>
+<h1 class="p-title__single-top c-title"><?php echo esc_html( get_the_title() ); ?></h1>
 
 
 
