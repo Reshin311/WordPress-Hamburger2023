@@ -361,7 +361,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .p-card-main {
-    width: 80vw;
+    width: 76vw;
     padding: 6vw 6vw;
     flex-wrap: 3vw;
     gap: 80px;
@@ -576,12 +576,12 @@ body {
   }
 }
 
-.wp-post-image {
+.wrapper-archive-content .wp-post-image {
   height: 230px;
   margin: 0 20px 0;
 }
 @media screen and (min-width: 768px) {
-  .wp-post-image {
+  .wrapper-archive-content .wp-post-image {
     width: 50%;
     margin: 0;
     height: auto;
@@ -599,9 +599,9 @@ body {
   }
 }
 
-.p-inner-media-archive-search {
-  padding-left: 50px;
-  font-size: 20px;
+.p-inner-media-archive-search .wrapper-archive-content p:first-child {
+  padding-left: 100px;
+  font-size: 30px;
 }
 
 .p-container-media-archive {
@@ -847,7 +847,7 @@ p.has-text-align-left .has-text-align-left {
   }
 }
 
-img.attachment-full {
+.wrapper-single-content .attachment-full {
   height: 225px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -855,13 +855,13 @@ img.attachment-full {
   margin: 0;
 }
 @media screen and (min-width: 768px) {
-  img.attachment-full {
+  .wrapper-single-content .attachment-full {
     height: 500px;
     width: 100%;
   }
 }
 @media screen and (min-width: 1280px) {
-  img.attachment-full {
+  .wrapper-single-content .attachment-full {
     width: 100%;
   }
 }
@@ -981,7 +981,7 @@ h3.wp-block-heading {
   margin: 0;
 }
 
-figure.wp-block-image.size-full {
+.wrapper-single-content > figure:first-of-type.wp-block-image.size-full {
   width: 100%;
   display: flex;
   height: 124px;
@@ -989,18 +989,18 @@ figure.wp-block-image.size-full {
      object-position: 50% 90%;
 }
 @media screen and (min-width: 768px) {
-  figure.wp-block-image.size-full {
+  .wrapper-single-content > figure:first-of-type.wp-block-image.size-full {
     height: 264px;
   }
 }
 @media screen and (min-width: 1280px) {
-  figure.wp-block-image.size-full {
+  .wrapper-single-content > figure:first-of-type.wp-block-image.size-full {
     width: 100%;
     height: 500px;
   }
 }
 
-figure.wp-block-image.size-full img {
+.wrapper-single-content > figure:first-of-type.wp-block-image.size-full > img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 100%;
@@ -1010,7 +1010,7 @@ figure.wp-block-image.size-full img {
   height: 100%;
 }
 @media screen and (min-width: 1280px) {
-  figure.wp-block-image.size-full img {
+  .wrapper-single-content > figure:first-of-type.wp-block-image.size-full > img {
     height: 100%;
     width: 100%;
     margin: 0 5vw 0;
@@ -1059,7 +1059,7 @@ figure.wp-block-image.size-full img {
   padding: 0;
 }
 
-figure.wp-block-image.size-large img {
+.wrapper-single-content > figure.wp-block-image:nth-of-type(2) {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1068,14 +1068,14 @@ figure.wp-block-image.size-large img {
   max-width: 581px;
 }
 @media screen and (min-width: 768px) {
-  figure.wp-block-image.size-large img {
+  .wrapper-single-content > figure.wp-block-image:nth-of-type(2) {
     margin-bottom: 231px;
     height: 358px;
     width: 581px;
   }
 }
 @media screen and (min-width: 1280px) {
-  figure.wp-block-image.size-large img {
+  .wrapper-single-content > figure.wp-block-image:nth-of-type(2) {
     width: 35vw;
     margin: 0 auto 60px;
   }
@@ -1106,11 +1106,6 @@ figure.wp-block-image.size-large img {
   font-size: 16px;
   color: #3C2A10;
   margin: 17px 6vw;
-}
-@media screen and (min-width: 1280px) {
-  .wrapper-single-content ul {
-    width: 60vw;
-  }
 }
 
 .p-list-ol__single {
@@ -1159,21 +1154,9 @@ ol {
   padding: 60px 3vw;
   overflow: hidden;
 }
-@media screen and (min-width: 1280px) {
-  .wrapper-single-content > ul:last-of-type {
-    width: 70vw;
-  }
-}
-
 .wp-block-table {
-  width: 90vw;
   font-size: 16px;
   margin: 5px 5vw 60px;
-}
-@media screen and (min-width: 1280px) {
-  .wp-block-table {
-    width: 70vw;
-  }
 }
 
 table tr td:nth-child(2) {
@@ -1808,7 +1791,7 @@ ol {
   }
 }
 
-.menu-mainmenu-container {
+.p-aside-container ul {
   font-size: 2.4rem;
   line-height: 5rem;
   color: #707070;

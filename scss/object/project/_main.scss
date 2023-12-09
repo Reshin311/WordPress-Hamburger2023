@@ -135,7 +135,7 @@ color: #3C2A10;
 
     }
     @include pc {
-        width: 80vw;
+        width: 76vw;
         padding: 6vw 6vw;
         flex-wrap: 3vw;
         gap: 80px;
@@ -353,7 +353,7 @@ color: #3C2A10;
 
 //archiveのカードの画像「singleのトップ画像に影響ーーーーーーーーーーー
 // .p-img-archive-media 
-.wp-post-image {
+.wrapper-archive-content .wp-post-image {
     height: 230px;
     margin: 0 20px 0;
     
@@ -374,9 +374,9 @@ color: #3C2A10;
     }
 }
 //検索結果がない時 カードに影響
-.p-inner-media-archive-search {
-    padding-left: 50px;
-    font-size: 20px;
+.p-inner-media-archive-search .wrapper-archive-content p:first-child{
+    padding-left: 100px;
+    font-size: 30px;
 }
 
 
@@ -621,7 +621,7 @@ p.has-text-align-left .has-text-align-left  {
 
 // .wp-block-cover__background
 // .post-68 img.attachment-full 
-img.attachment-full {
+.wrapper-single-content .attachment-full {
     // background-image: url(img/ham-burger-with-vegetables-1639557.png);
     // background-size: cover;
     height: 225px;
@@ -777,7 +777,7 @@ h3.wp-block-heading{
 //WPメディア上の横広画像
 // .post-68 figure.p-wp-image__media,
 // .post-188 figure.p-wp-image__media
-figure.wp-block-image.size-full {
+.wrapper-single-content>figure:first-of-type.wp-block-image.size-full {
     width: 100%;
 
     display: flex;
@@ -794,7 +794,9 @@ figure.wp-block-image.size-full {
 
 
 // img.wp-image-350
-figure.wp-block-image.size-full img {
+
+.wrapper-single-content>figure:first-of-type.wp-block-image.size-full>img {
+    
     object-fit: cover;
     object-position: 50% 100%;
     margin: 0 5vw;
@@ -887,7 +889,7 @@ figure.wp-block-image.size-full img {
 
 // .wp-image-171,
 // .wp-image-356 
-figure.wp-block-image.size-large img{
+.wrapper-single-content>figure.wp-block-image:nth-of-type(2){
     display: block;
     object-fit: cover;
     margin: 0 auto 30px;
@@ -940,9 +942,7 @@ figure.wp-block-image.size-large img{
     // @include tablet {
     //     margin: 17px 6vw ;
     // }
-    @include pc {
-        width: 60vw;
-    }
+    
 }
 .p-list-ol__single {
     padding-left: 3em;
@@ -1001,7 +1001,7 @@ ol {
     padding: 60px 3vw ;
     overflow: hidden;
     @include pc {
-        width: 70vw;
+        // width: 70%;
     }
 }
 // .p-child-list__tag
@@ -1014,12 +1014,11 @@ ol {
 // WPテーブル------------------------------------------------------
 //.p-container__single-table
 .wp-block-table {
-    width: 90vw;
     font-size: 16px;
     margin: 5px 5vw 60px;
-    @include pc {
-        width: 70vw;
-    }
+    // @include pc {
+    //     width: 69vw;
+    // }
 }
 
 //.p-table__single tr td:nth-child(2)

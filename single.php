@@ -15,9 +15,11 @@
         while( have_posts() ) :
             the_post(); ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            
+            <div class="wrapper-single-content">
             <?php the_post_thumbnail('full'); ?>
 
-            <div class="wrapper-single-content">
+            
                 <?php the_content(); ?>
             </div><!-- /.wrapper-single-content -->
 

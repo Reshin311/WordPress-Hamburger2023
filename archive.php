@@ -32,6 +32,8 @@
 
 
     <section class="p-inner-media-archive">
+
+    <div class="wrapper-archive-content">
 <!-- media 1 ------------------------------------------->
 
     <?php if(have_posts()):while(have_posts()):the_post(); ?>
@@ -45,6 +47,7 @@
         <?php endif; ?>
         <!-- <div class="p-img-archive-media p-img-archive-media__1"></div>/.p-img-archive-media -->
         <div class="p-container-media-archive">
+            
             <h3 class="p-title-archive-media p-title-archive-media__1">
                 <a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a>
             </h3><!-- /.title-archive-media -->
@@ -60,6 +63,7 @@
         <p>記事はありません。</p>
     <?php endif; ?>
 
+    </div><!-- /.wrapper-archive -->
 <!-- media 2 ------------------------------------------>
     <!-- <article class="p-media p-media-archive p-media-archive__2">
         <div class="p-img-archive-media p-img-archive-media__2"></div>

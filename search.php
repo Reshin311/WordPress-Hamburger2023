@@ -30,6 +30,7 @@
 
 <section class="p-inner-media-archive p-inner-media-archive-search">
 
+<div class="wrapper-archive-content">
 
 <!-- media 1 ------------------------------------------->
 <?php if(have_posts()):while(have_posts()):the_post(); ?>
@@ -58,6 +59,7 @@
         <p>記事はありません。</p>
     <?php endif; ?>
 
+    </div><!-- /.wrapper-archive -->
 
 <!-- media 2 ------------------------------------------>
 
