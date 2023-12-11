@@ -15,49 +15,62 @@
             <div class="p-card-main">
 
 
-                
+
                 <section class="p-card p-card__takeout">
+                    
                     <a href="<?php echo esc_url( home_url( '/category/takeout' ) ); ?>">
-                    <h3 class="p-title__main c-title__takeout1"><span class="p-line__under-title">Take Out</span></h3><!-- /.c-title__takeout -->    
-                    <div class="p-wrapper__description12">
-                        <div class="p-container-main-description p-container-main-description1">
-                        <h4 class="p-heading__main p-heading_takeout1">Take OUT</h4><!-- /.c-heading__main -->
-                        <p class="p-text p-text__takeout1">
-                        当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                        </p><!-- /.c-text__takeout -->
-                    </div><!-- /.c-container-main-description -->
+                        <div class="wrapper-card-upper">
 
-                <div class="p-container-main-description p-container-main-description2">
-                    <h4 class="p-heading__main p-heading__takeout2">Take OUT</h4><!-- /.c-title__takeout -->
-                    <p class="p-text p-text__takeout2">
-                        当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p>
-                </div><!-- /.c-container-main-description -->
+                            <h3 class="p-title__main c-title__takeout1"><span class="p-line__under-title">Take Out</span></h3><!-- /.c-title__takeout -->    
+                        </div><!-- /.wrapper-card-upper -->    
+                    </a>
+                
+                    <a href="<?php echo esc_url( home_url( '/category/takeout' ) ); ?>">
+                        <div class="p-wrapper__card-bottom">
 
-                </div><!-- /.p-wrapper__description12 -->
-                </a>
+                            <div class="p-container-main-description p-container-main-description1">
+                                <h4 class="p-heading__main p-heading_takeout1">Take OUT</h4><!-- /.c-heading__main -->
+                                <p class="p-text p-text__takeout1">当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p><!-- /.c-text__takeout -->
+                            </div><!-- /.c-container-main-description -->
+
+                            <div class="p-container-main-description p-container-main-description2">
+                                <h4 class="p-heading__main p-heading__takeout2">Take OUT</h4><!-- /.c-title__takeout -->
+                                <p class="p-text p-text__takeout2"> 当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています</p>
+                            </div><!-- /.c-container-main-description -->
+                        </div><!-- /.p-wrapper-card-bottom -->
+                    </a>
+
                 </section><!-- /.c-card__takeout -->
-                
+    
 
-                
+            <!-- <a href="http://reshinhamburgersite.local/category/eatin/"> -->
+    
                 <section class="p-card p-card__eatin">
-                <a href="http://reshinhamburgersite.local/category/eatin/">
+                    <a href="<?php echo esc_url( home_url( '/category/takeout' ) ); ?>">
+                        <div class="wrapper-card-upper">
+                            <h3 class="p-title__main p-title__eatin1"><span class="p-line__under-title">Eat In</span></h3><!-- /.c-title__takeout -->
+                        </div><!-- /.wrapper-card-upper -->    
+                    </a>
 
-                <h3 class="p-title__main p-title__eatin1"><span class="p-line__under-title">Eat In</span></h3><!-- /.c-title__takeout -->
-                <div class="p-container-main-description p-container-main-description1">
-                    <h4 class="p-heading__main p-heading__eatin2">Eat In</h4><!-- /.c-title__takeout -->
-                    <p class="p-text p-text__eatin1">
-                        店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</p><!-- /.c-text__takeout -->
-                </div><!-- /.c-container-main-description -->
-                
-                <div class="p-container-main-description p-container-main-description2">
-                    <h4 class="p-heading__main p-heading__eatin2">Eat In</h4><!-- /.c-title__takeout -->
-                    <p class="p-text p-text__eatin2">
-                        店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                    </p>
-                </div>
-                </a>
+                    <a href="<?php echo esc_url( home_url( '/category/takeout' ) ); ?>">
+                        <div class="p-wrapper__card-bottom">
+                        <div class="p-container-main-description p-container-main-description1">
+                            <h4 class="p-heading__main p-heading__eatin2">Eat In</h4><!-- /.c-title__takeout -->
+                            <p class="p-text p-text__eatin1">
+                                店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです</p><!-- /.c-text__takeout -->
+                        </div><!-- /.c-container-main-description -->
+                        <div class="p-container-main-description p-container-main-description2">
+                            <h4 class="p-heading__main p-heading__eatin2">Eat In</h4><!-- /.c-title__takeout -->
+                            <p class="p-text p-text__eatin2">
+                                店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
+                            </p>
+                        </div>
+                        </div><!-- /.p-wrapper-card-bottom -->
+                    </a>
+
                 </section><!-- /.c-card__eatin -->
-                
+            <!-- </a> -->
+    
 
 
             </div><!-- /.p-card-main -->

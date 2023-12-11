@@ -59,13 +59,15 @@ body {
     }
     @include pc {
         font-size: 7rem;
+        margin-bottom: auto;
         margin-bottom: min(700px);
+        
     }
 }
 
 .p-heading__main {
 color: #3C2A10;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin: 0 0 0;
     }
 
@@ -80,7 +82,8 @@ color: #3C2A10;
 .p-card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    // justify-content: flex-end;
+    justify-content: space-between;
     @include tablet {
         width: 50vw;
     }
@@ -88,6 +91,19 @@ color: #3C2A10;
     width: 40vw;
     }
 }
+
+// .wrapper-card-upper {
+//     align-content: flex-start;
+// }
+
+// .wrapper-card-bottom {
+//     align-content: flex-end;
+// }
+
+
+
+
+
 
 
 .p-card__takeout {
@@ -107,6 +123,9 @@ color: #3C2A10;
     background: rgba(255,255,255,0.8);
     margin: 0 15px 16px;
     padding: 16px;
+    // &:first-of-type{
+    //     margin: min(700px) 15px 16px;
+    // }
 }
 
 .p-heading__main {
@@ -131,7 +150,7 @@ color: #3C2A10;
     @include tablet {
         display: flex;
         padding: 40px 40px;
-        gap: 40px;
+        gap: 41px;
 
     }
     @include pc {
@@ -325,13 +344,15 @@ color: #3C2A10;
 }
 
 .p-media {
+    
+    margin-top: 20px;
     @include tablet{
-    display: flex;
+        display: flex;
     margin: 0 35px 20px;
     }
     @include pc {
-        margin: 0 100px 20px;
         display: flex;
+        margin: 0 100px 20px;
     }
     img {
         overflow: hidden;
@@ -351,7 +372,7 @@ color: #3C2A10;
 
 
 
-//archiveのカードの画像「singleのトップ画像に影響ーーーーーーーーーーー
+//archiveのカードの画像ーーーーーーーーーーー
 // .p-img-archive-media 
 .wrapper-archive-content .wp-post-image {
     height: 230px;
@@ -373,7 +394,7 @@ color: #3C2A10;
         
     }
 }
-//検索結果がない時 カードに影響
+//検索結果がない時 
 .p-inner-media-archive-search .wrapper-archive-content p:first-child{
     padding-left: 100px;
     font-size: 30px;

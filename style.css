@@ -287,13 +287,14 @@ body {
 @media screen and (min-width: 1280px) {
   .p-title__main {
     font-size: 7rem;
+    margin-bottom: auto;
     margin-bottom: 700px;
   }
 }
 
 .p-heading__main {
   color: #3C2A10;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin: 0 0 0;
 }
 
@@ -306,7 +307,7 @@ body {
 .p-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .p-card {
@@ -356,7 +357,7 @@ body {
   .p-card-main {
     display: flex;
     padding: 40px 40px;
-    gap: 40px;
+    gap: 41px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -549,6 +550,9 @@ body {
   }
 }
 
+.p-media {
+  margin-top: 20px;
+}
 @media screen and (min-width: 768px) {
   .p-media {
     display: flex;
@@ -557,8 +561,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .p-media {
-    margin: 0 100px 20px;
     display: flex;
+    margin: 0 100px 20px;
   }
 }
 .p-media img {
