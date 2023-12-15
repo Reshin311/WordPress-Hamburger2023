@@ -76,34 +76,16 @@
 <!--next back btn  ---------------------------------->
 <nav class="p-inner-archive-mobile-pagenation">
 
-    <a href="#" class="p-btn-archive__back" >前へ</a><!-- /.p-btn-archive__next -->
-    <a href="#" class="p-btn-archive__next">次へ</a><!-- /.p-btn-archive__back -->
+    <a href="http://reshinhamburgersite.local/?s" class="p-btn-archive__back" >&lt;&lt; 前へ</a><!-- /.p-btn-archive__next -->
+    <a href="http://reshinhamburgersite.local/page/2/?s" class="p-btn-archive__next">次へ &gt;&gt;</a><!-- /.p-btn-archive__back -->
 </nav>
 
 
-<?php wp_pagenavi(); ?>
-<!-- 
-<nav class="p-pager p-inner-archive-pagenation">
-    <ul class="p-pager__inner">
-        <li class="p-page p-pager__item">page 2/10</li>
-        <li class="p-pager__item">
-            <a href="" class="p-pager__double-left"><<
-            </a>
-        </li>
-        <li class="p-pager__item"><span class="p-pager__link">1</span></li> 
-        <li class="p-pager__item"><a class="p-pager__link p-pager__link-active">2</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">3</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">4</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">5</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">6</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">7</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">8</a></li>
-        <li class="p-pager__item"><a class="p-pager__link">9</a></li>
-        <li class="p-pager__item">
-            <a href="" class="p-pager__double-right">>>
-            </a>
-        </li>
-</nav> -->
+
+
+    <?php wp_pagenavi(); ?>
+
+
 
 
 </main>

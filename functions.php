@@ -47,6 +47,11 @@ function add_files() {
     //google fonts
     wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css?family=Philosopher');
     wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700&display=swap');
+    wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Nanum+Myeongjo&family=Roboto:wght@500;700&display=swap');
+    wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto:wght@500;700&display=swap');
+
+
+
     //font-awesome
     wp_enqueue_style('font-awesome','https://use.fontawesome.com/releases/v5.15.3/css/all.css');
     //

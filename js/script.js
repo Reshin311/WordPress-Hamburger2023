@@ -25,3 +25,22 @@ close.addEventListener('click',() => {
     open.classList.toggle('open-menu');
 
 });
+
+
+
+
+
+// var windowWidth = $(window).width();
+// var windowSm = 768;
+// if (windowWidth <= windowSm) {
+// //横幅768px以下（スマホ）に適用させるJavaScriptを記述
+// menu.classList.remove('open-menu');
+//     overlay.classList.remove('overlay');
+//     open.classList.remove('open-menu');
+
+// } else {
+// //横幅768px以上（PC、タブレット）に適用させるJavaScriptを記述
+// menu.classList.remove('open-menu');
+// overlay.classList.remove('overlay');
+//     open.classList.remove('open-menu');
+// }

@@ -4,12 +4,12 @@
 
 
 
-body.open-menu {
-    overflow: hidden;
-}
-body {
-    overflow-x: hidden;
-}
+// body.open-menu {
+//     overflow: hidden;
+// }
+// body {
+//     overflow-x: hidden;
+// }
 
 
 .p-title__main {
@@ -345,7 +345,7 @@ color: #3C2A10;
 
 .p-media {
     
-    margin-top: 20px;
+    margin: 20px 20px 0 20px;
     @include tablet{
         display: flex;
     margin: 0 35px 20px;
@@ -364,7 +364,7 @@ color: #3C2A10;
 .p-inner-media-archive img {
     @include mobile {
         box-sizing: border-box;
-        width: 94%;    
+        width: 100%;    
     }
     
 }
@@ -376,7 +376,7 @@ color: #3C2A10;
 // .p-img-archive-media 
 .wrapper-archive-content .wp-post-image {
     height: 230px;
-    margin: 0 20px 0;
+    // margin: 0 20px 0;
     
     @include tablet{
         width: 50%;
@@ -404,7 +404,7 @@ color: #3C2A10;
 
 .p-container-media-archive {
     background-color: #3c2b1c;
-    margin: 0  20px;
+    // margin: 0  20px;
     padding: 32px 16.11px 10px;
     
     @include tablet{
@@ -486,16 +486,68 @@ color: #3C2A10;
 
 // ページネーションーーーーーーーーーーーーーーー
 
-.p-inner-archive-mobile-pagenation {
-    position: relative;
-    height: 100px;
-    overflow: hidden;
-    font-size: 1.6rem;
-    color: #707070;
-    @include tablet {
-        display: none;
+
+.wp-pagenavi {
+	clear: both;
+	text-align:center;
+    font-family: Roboto;
+    font-weight: bold;
+    .previouspostslink,
+    .nextpostslink{
+        color: #707070;
+        font-size: 3rem;
+        font-weight: normal;
+        font-family: 'Nanum Myeongjo', serif;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+
     }
 }
+previouspostslink
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    color: #707070;
+    padding: 8px 15px;
+	margin: 0 2px;
+}
+
+.wp-pagenavi a.page,
+.wp-pagenavi .current {
+	color: #707070;
+	background-color: #FFF;
+	border: solid 1px #e0e0d2;
+	padding: 8px 15px;
+	margin: 0 10px;
+	white-space: nowrap;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration:none;
+}
+.wp-pagenavi a:hover{
+    color:#FFF; 
+    background-color:#999; 
+    border-color:#999;
+    }
+.wp-pagenavi span.current{
+	color: #FFF;
+	background-color: #3C2B1C;
+	border-color: #707070;
+	font-weight: bold;
+    }
+
+
+
+
+// -----------------------------
+
+
+
+
 .p-inner-archive-pagenation {
     
         display: none;
@@ -562,14 +614,24 @@ color: #3C2A10;
 
 // モバイル  ページネーション  ーーーーーーーー
 
+.p-inner-archive-mobile-pagenation {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    font-size: 1.6rem;
+    color: #707070;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    @include tablet {
+        display: none;
+    }
+}
+
 .p-btn-archive__back {
-    position: absolute;
-    left: 20px;
+    position: absolute;   
     top: 50px;
     padding-left: 30px;
-    background: url(img/arrow.jpg)no-repeat;
-
-    
+    // background: url(img/arrow.jpg)no-repeat;
 }
 
 .p-btn-archive__next {
@@ -583,10 +645,13 @@ color: #3C2A10;
 .wp-pagenavi {
     display: flex;
     justify-content: center;
-    margin: 135px auto 65px;
+    margin: 135px auto 60px;
     align-items: center;
     font-size: 16px;
     font-family: Roboto serif;
+    @include mobile {
+        display: none;
+    }
 }
 
 
