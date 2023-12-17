@@ -82,9 +82,15 @@ function theme_setup() {
     //メニュー
     register_nav_menus(
         array(
-            'main-menu' => 'メインメニュー'
+            'mainmenu' => 'メインメニュー'
         )
     );
+    register_nav_menu( 'footer-menu', 'フッターメニュー' );
+
+
+
+
+
     //全幅・幅広を有効化
     add_theme_support('align-wide');
     

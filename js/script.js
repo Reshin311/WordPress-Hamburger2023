@@ -26,7 +26,18 @@ close.addEventListener('click',() => {
 
 });
 
+window.onresize = function () {
+    var windowSize = window.innerWidth;
 
+    if (windowSize < 1280) {
+        console.log('Small!');
+    }  else {
+        console.log('Large!');
+        menu.classList.remove('open-menu');
+        overlay.classList.remove('overlay');
+        open.classList.remove('open-menu');
+    }
+};
 
 
 

@@ -9,7 +9,9 @@
 
         <div class="p-aside-container">
 
-            <?php wp_nav_menu(); ?>
+            <!-- <?php wp_nav_menu(); ?> -->
+            <?php wp_nav_menu( array('theme_location' => 'mainmenu')); ?>
+
     
         </div><!--p-aside-container-->
 </nav>

@@ -3,6 +3,13 @@
 <footer>
         <div class="l-footer">
             <section class="p-link__footer">
+
+
+            <?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
+
+
+
+
                 <a class="p-link-footer P-link-footer__shopinfo" href="<?php echo home_url('/shopinfo/'); ?>
 ">ショップ情報</a>
 

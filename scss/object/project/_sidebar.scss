@@ -65,11 +65,11 @@
 }
 
     .l-nav.open-menu {
-    width: 90%;
-    max-width: 367px;
+    width: 328px;
+
     overflow: scroll;
     @include tablet {
-        max-width: 367px;
+        width: 367px;
         height: 100%;
     }
 }
