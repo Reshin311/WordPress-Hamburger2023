@@ -82,7 +82,7 @@ function theme_setup() {
     //メニュー
     register_nav_menus(
         array(
-            'mainmenu' => 'メインメニュー'
+            'main-menu' => 'メインメニュー'
         )
     );
     register_nav_menu( 'footer-menu', 'フッターメニュー' );

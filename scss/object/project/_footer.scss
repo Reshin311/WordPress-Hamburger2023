@@ -15,7 +15,8 @@
 
 
 
-.p-link-footer {
+.p-link__footer ul{
+    width: 100%;
     display: inline-block;
     font-size: 1.8rem;
     color: #fff;
@@ -27,14 +28,20 @@
 
 }
 
-.p-link-footer__shopinfo {
+.p-link__footer li{
+    
     display: inline-block;
+
+}
+
+
+.p-link__footer li:first-of-type a {
     position: relative;
     }
     
 
-    .p-link-footer__history {
-        display: inline-block;
+    // .p-link-footer__history
+    .p-link__footer li:last-of-type a {
         margin-left: 2rem;
         position: relative;
         &::before {
