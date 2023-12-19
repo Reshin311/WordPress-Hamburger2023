@@ -997,7 +997,8 @@ h3.wp-block-heading{
 
 // .wrapper-single-content .wp-block-galley__single,
 // .wp-block-gallery.wp-block-gallery-2
-.wp-block-gallery.has-nested-images.columns-1.is-cropped.wp-block-gallery-1 {
+.wp-block-gallery.has-nested-images.columns-1.is-cropped.wp-block-gallery-1,
+.wp-block-gallery.has-nested-images.columns-1.is-cropped.wp-block-gallery-2 {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
