@@ -9,7 +9,10 @@ Version: 1.0
 */
 html {
   font-size: 62.5%;
-  font-family: "M PLUS 1", sans-serif;
+}
+
+body {
+  font-family: "M PLUS 1p", sans-serif;
 }
 
 *, *:before, *:after {
@@ -42,7 +45,7 @@ table th, table td {
 @media screen and (min-width: 1280px) {
   body {
     display: grid;
-    grid-template: "header aside" "main   aside" "footer footer";
+    grid-template: "header aside" "main aside" "footer footer";
   }
 }
 
@@ -60,6 +63,10 @@ nav {
 
 footer {
   grid-area: footer;
+}
+
+main {
+  align-self: start;
 }
 
 .c-input {
@@ -127,6 +134,7 @@ footer {
 }
 
 .p-title-header-main {
+  font-family: "Roboto", sans-serif;
   font-size: 40px;
   color: #707070;
   text-align: center;
@@ -284,7 +292,7 @@ body {
   font-size: 4.1rem;
   margin-top: 13px;
   margin-left: 15px;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 210px;
 }
 @media screen and (min-width: 768px) {
@@ -711,7 +719,7 @@ body {
 .wp-pagenavi {
   clear: both;
   text-align: center;
-  font-family: Roboto;
+  font-family: "M PLUS 1p", sans-serif;
   font-weight: bold;
 }
 .wp-pagenavi .previouspostslink,
@@ -813,7 +821,7 @@ previouspostslink .wp-pagenavi a,
   display: flex;
   align-items: center;
   font-size: 16px;
-  font-family: Roboto serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .p-pager__link-active {
@@ -854,7 +862,7 @@ previouspostslink .wp-pagenavi a,
   margin: 135px auto 60px;
   align-items: center;
   font-size: 16px;
-  font-family: Roboto serif;
+  font-family: "M PLUS 1p", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .wp-pagenavi {

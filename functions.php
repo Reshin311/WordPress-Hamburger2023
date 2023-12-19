@@ -28,15 +28,7 @@ function custom_theme_support(){
 //必要な機能を設定しafter_setup_themeのアクションフックにて実行
 add_action('after_setup_theme','custom_theme_support');
 
-//WPのギャラリーCSSを無効化
-add_filter(
-    "use_default_gallery_style",
-    "disable_default_gallery_style"
-);
 
-// function disable_default_gallery_style() {
-    // return false;
-// }
 
 
 
@@ -45,10 +37,19 @@ function add_files() {
     wp_enqueue_style('reset-style','https://unpkg.com/ress/dist/ress.min.css');
 
     //google fonts
-    wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css?family=Philosopher');
-    wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700&display=swap');
-    wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Nanum+Myeongjo&family=Roboto:wght@500;700&display=swap');
-    wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto:wght@500;700&display=swap');
+    // wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css?family=Philosopher');
+    // wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto:wght@500;700&display=swap', array() );
+    wp_enqueue_style ( 'mplus1p', 'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700;900&display=swap', array() );
+    wp_enqueue_style ( 'roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap', array() );
+
+    
+    // wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700&display=swap');
+    // wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Nanum+Myeongjo&family=Roboto:wght@500;700&display=swap');
+    // wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Roboto:wght@500;700&display=swap');
+
+
+
+
 
 
 
@@ -70,6 +71,13 @@ add_action('wp_enqueue_scripts','add_files');
 
 
 
+    
+
+
+
+
+
+
 function theme_setup() {
     //ここに必要な機能を追加する
 
@@ -87,22 +95,12 @@ function theme_setup() {
     );
     register_nav_menu( 'footer-menu', 'フッターメニュー' );
 
-
-
-
-
     //全幅・幅広を有効化
     add_theme_support('align-wide');
-    
-    
-    
 }
-
-
-
-
-
 add_action('after_setup_theme', 'theme_setup');
+
+
 
 //ウィジェットの有効化
 function wpbeg_widgets_init() {
@@ -121,8 +119,6 @@ function wpbeg_widgets_init() {
 add_action( 'widgets_init', 'wpbeg_widgets_init' );
 
 
-//本体ギャラリーCSS停止
-// add_filter( 'use_default_gallery_style', '__return_false' );
 
 function SearchFilter($query) {
     if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
@@ -136,14 +132,14 @@ function SearchFilter($query) {
 //-----------------------------------------------------
 function custom_search($search, $wp_query) {
     global $wpdb;
- 
+
     //検索ページ以外
     if (!$wp_query->is_search)
     return $search;
- 
+
     if (!isset($wp_query->query_vars))
     return $search;
- 
+
     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
     if ( count($search_words) > 0 ) {
         $search = '';
@@ -163,12 +159,12 @@ function custom_search($search, $wp_query) {
                         OR t.slug LIKE '{$search_word}'
                         OR tt.description LIKE '{$search_word}'
                         )
-          /*タグ名・カテゴリ名を検索対象に含める記述 end*/
+    /*タグ名・カテゴリ名を検索対象に含める記述 end*/
                 ) ";
             }
         }
     }
- 
+
     return $search;
 }
 add_filter('posts_search','custom_search', 10, 2);

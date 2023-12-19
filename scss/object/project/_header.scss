@@ -3,12 +3,13 @@
 
 
 
+
+
 .p-header-wrapper {
     background-color: #fff7ef;
     overflow: hidden;
     @include pc {
         display: flex;
-        // width: 80vw;
         width: 100%;
         height: 217px;
     }
@@ -34,6 +35,7 @@
 }   
 
 .p-title-header-main {
+    font-family: 'Roboto', sans-serif;;
     font-size: 40px;
     color: #707070;
     text-align: center;

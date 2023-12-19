@@ -12,6 +12,10 @@ body {
 }
 
 
+
+
+
+
 .p-title__main {
     color: #fff;
     font-weight: bold;
@@ -52,7 +56,7 @@ body {
     margin-top: 13px;
     margin-left: 15px;
     
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 210px;
     @include tablet {
         margin-bottom: min(275px);
@@ -490,7 +494,7 @@ color: #3C2A10;
 .wp-pagenavi {
 	clear: both;
 	text-align:center;
-    font-family: Roboto;
+    font-family: 'M PLUS 1p', sans-serif;
     font-weight: bold;
     .previouspostslink,
     .nextpostslink{
@@ -604,7 +608,7 @@ previouspostslink
     display: flex;
     align-items: center;
     font-size: 16px;
-    font-family: Roboto serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .p-pager__link-active {
@@ -648,7 +652,9 @@ previouspostslink
     margin: 135px auto 60px;
     align-items: center;
     font-size: 16px;
-    font-family: Roboto serif;
+    // font-family: Roboto serif;
+    font-family: 'M PLUS 1p', sans-serif;
+
     @include mobile {
         display: none;
     }
