@@ -8,6 +8,10 @@
 .p-header-wrapper {
     background-color: #fff7ef;
     overflow: hidden;
+    @include mobile {
+        height: 215px;
+    }
+    height: 217px;
     @include pc {
         display: flex;
         width: 100%;

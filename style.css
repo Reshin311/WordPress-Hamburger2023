@@ -7,7 +7,6 @@ Author URI:
 Description: 
 Version: 1.0
 */
-html {
   font-size: 62.5%;
 }
 
@@ -45,7 +44,8 @@ table th, table td {
 @media screen and (min-width: 1280px) {
   body {
     display: grid;
-    grid-template: "header aside" "main aside" "footer footer";
+    grid-template: "header  aside" "main    aside" "footer footer";
+    grid-template-rows: 215px auto auto;
   }
 }
 
@@ -103,6 +103,12 @@ main {
 .p-header-wrapper {
   background-color: #fff7ef;
   overflow: hidden;
+  height: 217px;
+}
+@media screen and (max-width: 768px) {
+  .p-header-wrapper {
+    height: 215px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .p-header-wrapper {
