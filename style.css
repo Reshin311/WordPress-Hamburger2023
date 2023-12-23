@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/* 
-Theme Name: ReshinHamburger
-Theme URI: 
-Author: 
-Author URI: 
-Description: 
-Version: 1.0
-*/
 html {
   font-size: 62.5%;
 }
@@ -46,7 +38,8 @@ table th, table td {
   body {
     display: grid;
     grid-template: "header  aside" "main    aside" "footer footer";
-    grid-template-rows: 215px auto auto;
+    grid-template-rows: 217px auto auto;
+    grid-template-columns: auto 367px;
   }
 }
 
@@ -60,6 +53,7 @@ main {
 
 nav {
   grid-area: aside;
+  justify-self: end;
 }
 
 footer {
@@ -611,6 +605,7 @@ body {
     width: 50%;
     margin: 0;
     height: auto;
+    min-height: 354px;
   }
 }
 
@@ -1686,6 +1681,20 @@ ol {
   .p-text__single-under-btn {
     margin-bottom: 274px;
   }
+}
+
+.p-wrapper__404 {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  height: 250px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+  color: #3C2A10;
+}
+.p-wrapper__404 .p-txt__404txt {
+  margin: 0 1em;
 }
 
 .l-footer {

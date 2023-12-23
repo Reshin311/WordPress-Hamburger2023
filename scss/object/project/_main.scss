@@ -386,7 +386,9 @@ color: #3C2A10;
         width: 50%;
         margin: 0;
         height: auto;
+        min-height: 354px;
         }
+        
 }
 .p-inner-media-archive {
     @include pc {
@@ -1578,3 +1580,18 @@ ol {
 
 
 
+// 404ページーーーーーーーー
+
+.p-wrapper__404 {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 250px;
+    align-items: center;
+    justify-content:space-around;
+    font-size: 2rem;
+    color: #3C2A10;
+    .p-txt__404txt {
+        margin: 0 1em;
+    }
+}

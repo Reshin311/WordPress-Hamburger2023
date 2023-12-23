@@ -9,8 +9,12 @@ body {
         "header  aside" 
         "main    aside"
         "footer footer";
+
     grid-template-rows: 217px auto auto;
-    }
+    grid-template-columns:auto 367px;
+
+}
+
 }
 
 
@@ -20,6 +24,7 @@ header {
     grid-area: header;
     
     
+    
 }
 main {
     grid-area: main;
@@ -27,7 +32,7 @@ main {
 }
 nav {
     grid-area: aside;
-    
+    justify-self: end;
 }
 footer {
     grid-area: footer;
